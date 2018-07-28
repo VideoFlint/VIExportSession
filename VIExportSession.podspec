@@ -9,7 +9,6 @@ Pod::Spec.new do |s|
     s.homepage = 'https://github.com/VideoFlint/VIExportSession'
 
     s.author = { 'Vito' => 'vvitozhang@gmail.com' }
-    s.social_media_url = "https://twitter.com/NoairZhangwei"
 
     s.platform = :ios, '9.0'
     s.swift_version = "4.0"
