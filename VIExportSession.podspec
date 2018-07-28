@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
     s.swift_version = "4.0"
 
     s.source = { :git => 'https://github.com/VideoFlint/VIExportSession.git', :tag => s.version.to_s }
-    s.source_files = 'Source/*.{swift}'
+    s.source_files = 'VIExportSession/Source/*.{swift}'
 
     s.requires_arc = true
     s.frameworks = 'AVFoundation'
