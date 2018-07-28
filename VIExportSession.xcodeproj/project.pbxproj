@@ -12,6 +12,8 @@
 		5F464557210C1D000013ADC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F464555210C1D000013ADC3 /* Main.storyboard */; };
 		5F464559210C1D020013ADC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F464558210C1D020013ADC3 /* Assets.xcassets */; };
 		5F46455C210C1D020013ADC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F46455A210C1D020013ADC3 /* LaunchScreen.storyboard */; };
+		5F464566210C1D2A0013ADC3 /* ExportConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F464564210C1D2A0013ADC3 /* ExportConfiguration.swift */; };
+		5F464567210C1D2A0013ADC3 /* VIExportSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F464565210C1D2A0013ADC3 /* VIExportSession.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		5F464558210C1D020013ADC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5F46455B210C1D020013ADC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5F46455D210C1D020013ADC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F464564210C1D2A0013ADC3 /* ExportConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExportConfiguration.swift; sourceTree = "<group>"; };
+		5F464565210C1D2A0013ADC3 /* VIExportSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VIExportSession.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 		5F464550210C1D000013ADC3 /* VIExportSession */ = {
 			isa = PBXGroup;
 			children = (
+				5F464563210C1D2A0013ADC3 /* Source */,
 				5F464551210C1D000013ADC3 /* AppDelegate.swift */,
 				5F464553210C1D000013ADC3 /* ViewController.swift */,
 				5F464555210C1D000013ADC3 /* Main.storyboard */,
@@ -62,6 +67,15 @@
 				5F46455D210C1D020013ADC3 /* Info.plist */,
 			);
 			path = VIExportSession;
+			sourceTree = "<group>";
+		};
+		5F464563210C1D2A0013ADC3 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				5F464564210C1D2A0013ADC3 /* ExportConfiguration.swift */,
+				5F464565210C1D2A0013ADC3 /* VIExportSession.swift */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,6 +150,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F464554210C1D000013ADC3 /* ViewController.swift in Sources */,
+				5F464567210C1D2A0013ADC3 /* VIExportSession.swift in Sources */,
+				5F464566210C1D2A0013ADC3 /* ExportConfiguration.swift in Sources */,
 				5F464552210C1D000013ADC3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -213,7 +229,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -267,7 +283,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
