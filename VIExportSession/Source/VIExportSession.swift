@@ -8,12 +8,12 @@
 
 import AVFoundation
 
-class VIExportSession {
+public class VIExportSession {
     
-    private(set) var asset: AVAsset
-    var exportConfiguration = ExportConfiguration()
-    var videoConfiguration = VideoConfiguration()
-    var audioConfiguration = AudioConfiguration()
+    public private(set) var asset: AVAsset
+    public var exportConfiguration = ExportConfiguration()
+    public var videoConfiguration = VideoConfiguration()
+    public var audioConfiguration = AudioConfiguration()
     
     fileprivate var reader: AVAssetReader!
     fileprivate var videoOutput: AVAssetReaderVideoCompositionOutput?
@@ -24,12 +24,12 @@ class VIExportSession {
     fileprivate var inputQueue = DispatchQueue(label: "VideoEncoderQueue")
     
     // MARK: - Exporting properties
-    var progress: Float = 0 {
+    public var progress: Float = 0 {
         didSet {
             progressHandler?(progress)
         }
     }
-    var videoProgress: Float = 0 {
+    public var videoProgress: Float = 0 {
         didSet {
             if audioInput != nil {
                 progress = 0.95 * videoProgress + 0.05 * audioProgress
@@ -38,7 +38,7 @@ class VIExportSession {
             }
         }
     }
-    var audioProgress: Float = 0 {
+    public var audioProgress: Float = 0 {
         didSet {
             if videoInput != nil {
                 progress = 0.95 * videoProgress + 0.05 * audioProgress
@@ -48,19 +48,19 @@ class VIExportSession {
         }
     }
     
-    var progressHandler: ((Float) -> Void)?
-    var completionHandler: ((Error?) -> Void)?
+    public var progressHandler: ((Float) -> Void)?
+    public var completionHandler: ((Error?) -> Void)?
     
     fileprivate var videoCompleted = false
     fileprivate var audioCompleted = false
     
-    init(asset: AVAsset) {
+    public init(asset: AVAsset) {
         self.asset = asset
     }
     
     // MARK: - Main
     
-    func cancelExport() {
+    public func cancelExport() {
         if let writer = writer, let reader = reader {
             inputQueue.async {
                 writer.cancelWriting()
@@ -69,7 +69,7 @@ class VIExportSession {
         }
     }
     
-    func export() {
+    public func export() {
         cancelExport()
         reset()
         do {

@@ -8,26 +8,26 @@
 
 import AVFoundation
 
-class ExportConfiguration {
-    var outputURL = URL.temporaryExportURL()
-    var fileType: AVFileType = .mp4
-    var shouldOptimizeForNetworkUse = false
-    var metadata: [AVMetadataItem] = []
+public class ExportConfiguration {
+    public var outputURL = URL.temporaryExportURL()
+    public var fileType: AVFileType = .mp4
+    public var shouldOptimizeForNetworkUse = false
+    public var metadata: [AVMetadataItem] = []
 }
 
-class VideoConfiguration {
+public class VideoConfiguration {
     // Video settings see AVVideoSettings.h
-    var videoInputSetting: [String: Any]?
-    var videoOutputSetting: [String: Any]?
-    var videoComposition: AVVideoComposition?
+    public var videoInputSetting: [String: Any]?
+    public var videoOutputSetting: [String: Any]?
+    public var videoComposition: AVVideoComposition?
 }
 
-class AudioConfiguration {
+public class AudioConfiguration {
     // Audio settings see AVAudioSettings.h
-    var audioInputSetting: [String: Any]?
-    var audioOutputSetting: [String: Any]?
-    var audioMix: AVAudioMix?
-    var audioTimePitchAlgorithm: AVAudioTimePitchAlgorithm?
+    public var audioInputSetting: [String: Any]?
+    public var audioOutputSetting: [String: Any]?
+    public var audioMix: AVAudioMix?
+    public var audioTimePitchAlgorithm: AVAudioTimePitchAlgorithm?
 }
 
 // MARK: - Helper
